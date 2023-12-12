@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 #define N 1000
 
@@ -13,4 +14,5 @@ int main (int argc, char **argv)
     }
 
     printf("Bye OmpToy.\n");
+    system("read -p 'Press Enter to continue...' var");
 }
