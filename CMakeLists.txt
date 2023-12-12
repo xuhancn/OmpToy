@@ -16,4 +16,5 @@ if(${OpenMP_FOUND})
   # It will use openmp lib of current compiler.
   # message("!!!!!OpenMP_CXX_LIBRARIES: ${OpenMP_CXX_LIBRARIES}")
   target_link_libraries(${PROJ_NAME} PUBLIC "${OpenMP_CXX_LIBRARIES}")
+  target_link_libraries(${PROJ_NAME} PUBLIC "dl")
 endif()
