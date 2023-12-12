@@ -4,11 +4,11 @@ set(PROJ_NAME "OmpToy")
 project (${PROJ_NAME})
 
 set(PROJECT_ROOT_DIR ${PROJECT_SOURCE_DIR})
-list(APPEND CMAKE_MODULE_PATH ${IPEX_ROOT_DIR}/cmake/Modules)
+list(APPEND CMAKE_MODULE_PATH ${PROJECT_ROOT_DIR}/cmake/Modules)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
 
 set(SOURCES_FILES ${PROJECT_ROOT_DIR}/src/main.cpp)
-include(${PROJECT_ROOT_DIR}/cmake/tc_malloc.cmake)
-
 add_executable(${PROJ_NAME} ${SOURCES_FILES})
 
 find_package(OMP QUIET)
